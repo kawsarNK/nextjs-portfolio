@@ -40,7 +40,7 @@ function useTypewriter(words, period = 2000) {
 
 // ---------- Hero Component ----------
 export default function Hero() {
-    const roles = ['Frontend Developer', 'MERN Stack Developer', 'Software Engineer']
+    const roles = ['Software Engineer', 'Frontend Developer', 'MERN Stack Developer']
     const { text: typedRole } = useTypewriter(roles, 1500)
 
     const waveVariants = {
@@ -121,7 +121,7 @@ export default function Hero() {
                                 }}
                                 className="absolute top-0 right-0 z-30 bg-blue-900/10 backdrop-blur-xl rounded-2xl px-4 py-2 border-2 border-[#6C63FF]/50 shadow-lg"
                             >
-                                <p className="text-white text-xs font-semibold">10+ Projects</p>
+                                <p className="text-blue-900 text-xs font-bold">10+ Projects</p>
                             </motion.div>
 
                             {/* Bottom badge – moves left → right → left */}
