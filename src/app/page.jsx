@@ -6,8 +6,9 @@ import Education from '@/components/Education'
 import TechStack from '@/components/TechStack'
 import Qualifications from '@/components/Qualifications'
 import Experience from '@/components/Experience'
-import Contact from '@/components/Contact'
+import Contact from '../components/Contact'
 import Footer from '@/components/Footer'
+
 
 export default function Home() {
     return (
@@ -22,6 +23,7 @@ export default function Home() {
                 <Qualifications />
                 {/* <Experience /> */}
                 <Contact />
+                
             </main>
             <Footer />
         </>

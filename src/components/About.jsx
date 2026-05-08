@@ -58,7 +58,7 @@ export default function About() {
                             {/* Photo container */}
                             <div className="absolute inset-0 rounded-3xl overflow-hidden ring-4 ring-[#0F0F1A] z-10">
                                 <img
-                                    src="/MYProfPic.png"   // Replace with your actual file name
+                                    src="/MYProfpic.png"
                                     alt="Kawsar Hamid"
                                     className="w-full h-full object-cover"
                                 />
@@ -76,7 +76,7 @@ export default function About() {
 
                         {/* Resume button */}
                         <a
-                            href="/resume.pdf"
+                            href="/Kawsar_Hamid_s_CV.pdf"
                             download
                             className="mt-6 inline-flex items-center gap-2 bg-[#6C63FF] hover:bg-[#5A52D5] text-white px-5 py-2.5 rounded-full text-xs font-semibold transition-all duration-300 shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40"
                         >

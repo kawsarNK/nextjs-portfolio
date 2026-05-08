@@ -133,7 +133,7 @@ export default function Footer() {
                             <ul className="space-y-3">
                                 <li>
                                     <a
-                                        href="/resume.pdf"
+                                        href="/Kawsar_Hamid_s_CV.pdf"
                                         download
                                         className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm"
                                     >

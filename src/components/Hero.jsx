@@ -105,7 +105,7 @@ export default function Hero() {
 
                             <div className="absolute inset-0 rounded-2xl overflow-hidden ring-4 ring-[#0F0F1A] z-10">
                                 <img
-                                    src="/MYProfPic.png"
+                                    src="/myPic.jpeg"
                                     alt="Kawsar Hamid"
                                     className="w-full h-full object-cover"
                                 />
@@ -119,7 +119,7 @@ export default function Hero() {
                                     repeat: Infinity,
                                     ease: 'easeInOut',
                                 }}
-                                className="absolute top-0 right-0 z-30 bg-white/10 backdrop-blur-xl rounded-2xl px-4 py-2 border-2 border-[#6C63FF]/50 shadow-lg"
+                                className="absolute top-0 right-0 z-30 bg-blue-900/10 backdrop-blur-xl rounded-2xl px-4 py-2 border-2 border-[#6C63FF]/50 shadow-lg"
                             >
                                 <p className="text-white text-xs font-semibold">10+ Projects</p>
                             </motion.div>
@@ -132,9 +132,9 @@ export default function Hero() {
                                     repeat: Infinity,
                                     ease: 'easeInOut',
                                 }}
-                                className="absolute bottom-0 left-0 z-30 bg-white/10 backdrop-blur-xl rounded-2xl px-4 py-2 border-2 border-[#6C63FF]/50 shadow-lg"
+                                className="absolute bottom-0 left-0 z-30 bg-blue-900/10 backdrop-blur-xl rounded-2xl px-4 py-2 border-2 border-[#6C63FF]/50 shadow-lg"
                             >
-                                <p className="text-white text-xs font-semibold">2+ Years Exp.</p>
+                                <p className="text-white text-xs font-semibold">1.5+ Years Exp.</p>
                             </motion.div>
                         </motion.div>
                     </div>
@@ -205,7 +205,7 @@ export default function Hero() {
                                 <FaArrowRight className="text-sm transition-transform group-hover:translate-x-1" />
                             </a>
                             <a
-                                href="/resume.pdf"
+                                href="/Kawsar_Hamid_s_CV.pdf"
                                 download
                                 className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-sm text-white px-7 py-3.5 rounded-full text-base font-semibold border border-white/10 hover:bg-white/10 transition-all duration-300"
                             >

@@ -9,65 +9,33 @@ import {
 } from 'react-icons/fa'
 
 export default function Contact() {
-    const [feedback, setFeedback] = useState({ msg: '', type: '' })
-    const [sending, setSending] = useState(false)
+    const [result, setResult] = useState("")
 
-    const handleSubmit = async (e) => {
-        e.preventDefault()
-        const form = e.target
-        const name = form.name.value.trim()
-        const email = form.email.value.trim()
-        const message = form.message.value.trim()
+    const onSubmit = async (event) => {
+        event.preventDefault()
+        setResult("Sending....")
 
-        if (!name || !email || !message) {
-            setFeedback({ msg: 'Please fill in all required fields.', type: 'error' })
-            return
-        }
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-            setFeedback({ msg: 'Please enter a valid email address.', type: 'error' })
-            return
-        }
-
-        setSending(true)
-        setFeedback({ msg: '', type: '' })
-
-        //     // Simulate API call
-        //     setTimeout(() => {
-        //         setFeedback({
-        //             msg: '✅ Message sent successfully! I’ll get back to you soon.',
-        //             type: 'success',
-        //         })
-        //         form.reset()
-        //         setSending(false)
-        //         setTimeout(() => setFeedback({ msg: '', type: '' }), 5000)
-        //     }, 1500)
-        // }
-        // ---- Send to Web3Forms ----
-        const formData = new FormData()
-        formData.append('access_key', '3a704c30-2a6d-4958-92d7-9f387d2d8b3f')
-        formData.append('name', name)
-        formData.append('email', email)
-        formData.append('subject', form.subject.value || 'New message from portfolio')
-        formData.append('message', message)
+        const formData = new FormData(event.target)
+        formData.append("access_key", "3a704c30-2a6d-4958-92d7-9f387d2d8b3f")
 
         try {
-            const response = await fetch('v', {
-                method: 'POST',
-                body: formData,
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
             })
 
             const data = await response.json()
             if (data.success) {
-                setFeedback({ msg: '✅ Message sent! I’ll get back to you soon.', type: 'success' })
-                form.reset()
+                setResult("✅ Form Submitted Successfully! I'll get back to you soon.")
+                event.target.reset()
+                setTimeout(() => setResult(""), 5000)
             } else {
-                setFeedback({ msg: '❌ Something went wrong. Please try again.', type: 'error' })
+                setResult("❌ Error submitting form. Please try again.")
+                setTimeout(() => setResult(""), 5000)
             }
         } catch (error) {
-            setFeedback({ msg: '❌ Network error. Please try again later.', type: 'error' })
-        } finally {
-            setSending(false)
-            setTimeout(() => setFeedback({ msg: '', type: '' }), 5000)
+            setResult("❌ Network error. Please try again later.")
+            setTimeout(() => setResult(""), 5000)
         }
     }
 
@@ -123,7 +91,7 @@ export default function Contact() {
                 <ScrollReveal delay={150}>
                     <div className="max-w-2xl mx-auto">
                         <div className="card-hover bg-white/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-[#6C63FF]/40 transition-all duration-300">
-                            <form onSubmit={handleSubmit} className="space-y-5">
+                            <form onSubmit={onSubmit} className="space-y-5">
                                 <div className="grid sm:grid-cols-2 gap-5">
                                     <div>
                                         <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1.5">
@@ -179,10 +147,9 @@ export default function Contact() {
                                 </div>
                                 <button
                                     type="submit"
-                                    disabled={sending}
                                     className="w-full btn-glow bg-[#6C63FF] hover:bg-[#5A52D5] text-white py-3.5 rounded-xl text-base font-semibold flex items-center justify-center gap-2 disabled:opacity-70 transition-all duration-300"
                                 >
-                                    {sending ? (
+                                    {result === "Sending...." ? (
                                         'Sending...'
                                     ) : (
                                         <>
@@ -190,12 +157,12 @@ export default function Contact() {
                                         </>
                                     )}
                                 </button>
-                                {feedback.msg && (
+                                {result && (
                                     <p
-                                        className={`text-center text-sm ${feedback.type === 'success' ? 'text-green-400' : 'text-red-400'
+                                        className={`text-center text-sm ${result.includes('Successfully') ? 'text-green-400' : 'text-red-400'
                                             }`}
                                     >
-                                        {feedback.msg}
+                                        {result}
                                     </p>
                                 )}
                             </form>
