@@ -15,13 +15,17 @@ export default function Footer() {
 
     return (
         <footer className="bg-[#0a0a14] border-t border-white/5">
-            {/* Main content – tighter outer padding */}
             <div className="max-w-6xl mx-auto px-4 py-16">
-                {/* On md+ screens: flex row with more gap between columns */}
-                <div className="flex flex-col md:flex-row md:justify-between gap-10 md:gap-16">
+                {/* 
+                   Change: Switched from Flex to Grid 
+                   grid-cols-1: Mobile (default)
+                   md:grid-cols-2: Tablet (min-width: 768px)
+                   lg:grid-cols-4: Desktop (min-width: 1024px)
+                */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 md:gap-x-16 md:gap-y-10">
 
                     {/* Column 1: Brand */}
-                    <ScrollReveal className="flex-shrink-0 md:max-w-[260px]">
+                    <ScrollReveal className="w-full">
                         <div>
                             <a href="#hero" className="text-2xl font-bold text-white">
                                 Kawsar<span className="text-[#6C63FF]">.</span>dev
@@ -55,7 +59,7 @@ export default function Footer() {
                     </ScrollReveal>
 
                     {/* Column 2: Navigation */}
-                    <ScrollReveal delay={100} className="flex-shrink-0">
+                    <ScrollReveal delay={100} className="w-full">
                         <div>
                             <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
                                 Navigation
@@ -83,7 +87,7 @@ export default function Footer() {
                     </ScrollReveal>
 
                     {/* Column 3: Contact */}
-                    <ScrollReveal delay={200} className="flex-shrink-0">
+                    <ScrollReveal delay={200} className="w-full">
                         <div>
                             <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
                                 Contact
@@ -95,7 +99,7 @@ export default function Footer() {
                                         <span className="block text-xs text-gray-500 uppercase">Email</span>
                                         <a
                                             href="mailto:mdkawsarnk78@gmail.com"
-                                            className="hover:text-[#6C63FF] transition-colors"
+                                            className="hover:text-[#6C63FF] transition-colors break-all"
                                         >
                                             mdkawsarnk78@gmail.com
                                         </a>
@@ -117,7 +121,7 @@ export default function Footer() {
                                     <FaLocationDot className="text-[#6C63FF] mt-0.5 flex-shrink-0" />
                                     <span>
                                         <span className="block text-xs text-gray-500 uppercase">Location</span>
-                                        <span>Khilkhet Moddopara, Dhaka, Bangladesh</span>
+                                        <span>Khilkhet Moddopara, Dhaka</span>
                                     </span>
                                 </li>
                             </ul>
@@ -125,7 +129,7 @@ export default function Footer() {
                     </ScrollReveal>
 
                     {/* Column 4: Resources */}
-                    <ScrollReveal delay={300} className="flex-shrink-0">
+                    <ScrollReveal delay={300} className="w-full">
                         <div>
                             <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
                                 Resources
@@ -167,9 +171,9 @@ export default function Footer() {
             {/* Bottom bar */}
             <div className="border-t border-white/5 py-6">
                 <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500">
-                    <p>&copy; {year} Kawsar Hamid. All rights reserved.</p>
-                    <p>
-                        Designed & built with{' '}
+                    <p className="text-center sm:text-left">&copy; {year} Kawsar Hamid. All rights reserved.</p>
+                    <p className="text-center sm:text-right">
+                        Built with{' '}
                         <span className="text-[#6C63FF]">Next.js</span> &{' '}
                         <span className="text-[#06b6d4]">Tailwind CSS</span>
                     </p>
