@@ -59,7 +59,7 @@ export default function About() {
                             {/* Photo container */}
                             <div className="absolute inset-0 rounded-3xl overflow-hidden ring-4 ring-[#0F0F1A] z-10">
                                 <Image
-                                    src="/MYProfpic.png"
+                                    src="/mypic.png"
                                     alt="Kawsar Hamid"
                                     height={1089}
                                     width={896}
