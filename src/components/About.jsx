@@ -8,6 +8,7 @@ import {
     FaCode,
 } from 'react-icons/fa6'
 import { motion } from 'framer-motion'
+import Image from 'next/image';
 
 const stats = [
     { value: '1.5+', label: 'Years Experience' },
@@ -57,9 +58,11 @@ export default function About() {
                             <div className="absolute inset-0 rounded-3xl animate-[spin_6s_linear_infinite] bg-gradient-to-r from-[#6C63FF] via-purple-500 to-pink-500 opacity-75 blur-sm" />
                             {/* Photo container */}
                             <div className="absolute inset-0 rounded-3xl overflow-hidden ring-4 ring-[#0F0F1A] z-10">
-                                <img
+                                <Image
                                     src="/MYProfpic.png"
                                     alt="Kawsar Hamid"
+                                    height={1089}
+                                    width={896}
                                     className="w-full h-full object-cover"
                                 />
                             </div>
