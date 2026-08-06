@@ -84,7 +84,7 @@ export default function About() {
                             className="mt-6 inline-flex items-center gap-2 bg-[#6C63FF] hover:bg-[#5A52D5] text-white px-5 py-2.5 rounded-full text-xs font-semibold transition-all duration-300 shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40"
                         >
                             <FaDownload className="text-sm" />
-                            View Resume
+                            View My CV
                         </a>
                     </ScrollReveal>
 

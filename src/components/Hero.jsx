@@ -205,7 +205,7 @@ export default function Hero() {
                                 <FaArrowRight className="text-sm transition-transform group-hover:translate-x-1" />
                             </a>
                             <a
-                                href="/Kawsar_Hamid_s_CV.pdf"
+                                href="/Kawsar_Hamid_Resume.pdf"
                                 download
                                 className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-sm text-white px-7 py-3.5 rounded-full text-base font-semibold border border-white/10 hover:bg-white/10 transition-all duration-300"
                             >
