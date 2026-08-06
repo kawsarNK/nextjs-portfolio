@@ -5,6 +5,26 @@ import { FaArrowRight, FaSearch } from 'react-icons/fa'
 
 const projects = [
     {
+        title: 'PawHaven - Pet Adoption Platform',
+        description:
+            'A full-stack pet adoption platform where users can explore pets, submit adoption requests, and manage their adoption journey. Pet owners can create, update, delete listings, and handle adoption requests through a secure dashboard.',
+        tech: [
+            'Next.js',
+            'React',
+            'Tailwind CSS',
+            'Framer Motion',
+            'JavaScript',
+            'Better Auth',
+            'Node.js',
+            'Express.js',
+            'MongoDB',
+            'JWT Authentication'
+        ],
+        live: 'https://pawhaven-client.vercel.app',
+        github: 'https://github.com/kawsarNK/pawhaven_client',
+        image: '/pawhaven.png',
+    },
+    {
         title: 'Tiles Gallery Website',
         description:
             'A full-stack dynamic gallery featuring a responsive UI, advanced search, and a secure authentication system with Google Sign-In and profile management.',
