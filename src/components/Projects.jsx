@@ -5,6 +5,30 @@ import { FaArrowRight, FaSearch } from 'react-icons/fa'
 
 const projects = [
     {
+        title: 'PromptArc - AI Prompt Sharing & Marketplace',
+        description:
+            'A full-stack AI prompt marketplace where users can discover, create, bookmark, review, report, and manage prompts for tools like ChatGPT, Gemini, Claude, and Midjourney. The platform includes role-based User, Creator, and Admin dashboards, creator analytics, prompt moderation, premium prompt access with Stripe, Google authentication, Cloudinary image uploads, notifications, and server-side search, filtering, sorting, and pagination.',
+        tech: [
+            'Next.js',
+            'React',
+            'JavaScript',
+            'Framer Motion',
+            'Recharts',
+            'React Toastify',
+            'Node.js',
+            'Express.js',
+            'MongoDB',
+            'Mongoose',
+            'JWT Authentication',
+            'Google OAuth',
+            'Stripe',
+            'Cloudinary'
+        ],
+        live: 'https://prompt-arc-frontend.vercel.app',
+        github: 'https://github.com/kawsarNK/promptArc_frontend',
+        image: '/promptarc.png',
+    },
+    {
         title: 'PawHaven - Pet Adoption Platform',
         description:
             'A full-stack pet adoption platform where users can explore pets, submit adoption requests, and manage their adoption journey. Pet owners can create, update, delete listings, and handle adoption requests through a secure dashboard.',
